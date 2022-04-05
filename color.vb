@@ -10,9 +10,9 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class colore
-    Public Property colores As Integer
-    Public Property color As String
+Partial Public Class color
+    Public Property id_color As Integer
+    Public Property color1 As String
     Public Property estado As String
 
 End Class

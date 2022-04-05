@@ -11,22 +11,6 @@ End Code
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(Function(model) model.categoriaid)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(Function(model) model.categoriaid)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.producto1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(Function(model) model.producto1)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(Function(model) model.precio)
         </dt>
 
@@ -40,6 +24,22 @@ End Code
 
         <dd>
             @Html.DisplayFor(Function(model) model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(Function(model) model.producto1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(Function(model) model.producto1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(Function(model) model.categoria.categoria1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(Function(model) model.categoria.categoria1)
         </dd>
 
     </dl>

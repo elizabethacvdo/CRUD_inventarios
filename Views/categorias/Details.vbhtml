@@ -28,6 +28,6 @@ End Code
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", New With { .id = Model.id }) |
+    @Html.ActionLink("Edit", "Edit", New With { .id = Model.id_categoria }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

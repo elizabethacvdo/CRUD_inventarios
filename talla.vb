@@ -11,7 +11,7 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class talla
-    Public Property id As Integer
+    Public Property id_talla As Integer
     Public Property talla1 As String
     Public Property estado As String
 

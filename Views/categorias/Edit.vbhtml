@@ -12,7 +12,7 @@ End Code
         <h4>categoria</h4>
         <hr />
         @Html.ValidationSummary(True, "", New With { .class = "text-danger" })
-        @Html.HiddenFor(Function(model) model.id)
+        @Html.HiddenFor(Function(model) model.id_categoria)
 
         <div class="form-group">
             @Html.LabelFor(Function(model) model.categoria1, htmlAttributes:= New With { .class = "control-label col-md-2" })

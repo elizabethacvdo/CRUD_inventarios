@@ -11,10 +11,12 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class producto
-    Public Property id As Integer
-    Public Property categoriaid As Nullable(Of Integer)
-    Public Property producto1 As String
+    Public Property id_producto As Integer
+    Public Property id_categoria As Nullable(Of Integer)
     Public Property precio As Nullable(Of Double)
     Public Property estado As String
+    Public Property producto1 As String
+
+    Public Overridable Property categoria As categoria
 
 End Class

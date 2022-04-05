@@ -159,32 +159,32 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="categoria.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>inventarioModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="colore.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="color.vb">
+      <DependentUpon>inventarioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\categoriasController.vb" />
-    <Compile Include="Controllers\coloresController.vb" />
-    <Compile Include="Controllers\productoesController.vb" />
+    <Compile Include="Controllers\colorsController.vb" />
+    <Compile Include="Controllers\productosController.vb" />
     <Compile Include="Controllers\tallasController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.vb">
+    <Compile Include="inventarioModel.Context.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>inventarioModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.vb">
+    <Compile Include="inventarioModel.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>inventarioModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model1.vb">
+    <Compile Include="inventarioModel.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>inventarioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -203,10 +203,10 @@
     </Compile>
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="producto.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>inventarioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="talla.vb">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>inventarioModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -231,12 +231,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <EntityDeploy Include="Model1.edmx">
+    <EntityDeploy Include="inventarioModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.vb</LastGenOutput>
+      <LastGenOutput>inventarioModel.Designer.vb</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="inventarioModel.edmx.diagram">
+      <DependentUpon>inventarioModel.edmx</DependentUpon>
     </Content>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -249,15 +249,15 @@
     </None>
     <None Include="packages.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Model1.Context.tt">
+    <Content Include="inventarioModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.vb</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>inventarioModel.edmx</DependentUpon>
+      <LastGenOutput>inventarioModel.Context.vb</LastGenOutput>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="inventarioModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.vb</LastGenOutput>
+      <DependentUpon>inventarioModel.edmx</DependentUpon>
+      <LastGenOutput>inventarioModel.vb</LastGenOutput>
     </Content>
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -270,21 +270,21 @@
     <Content Include="Views\tallas\Details.vbhtml" />
     <Content Include="Views\tallas\Edit.vbhtml" />
     <Content Include="Views\tallas\Index.vbhtml" />
+    <Content Include="Views\colors\Create.vbhtml" />
+    <Content Include="Views\colors\Delete.vbhtml" />
+    <Content Include="Views\colors\Details.vbhtml" />
+    <Content Include="Views\colors\Edit.vbhtml" />
+    <Content Include="Views\colors\Index.vbhtml" />
     <Content Include="Views\categorias\Create.vbhtml" />
     <Content Include="Views\categorias\Delete.vbhtml" />
     <Content Include="Views\categorias\Details.vbhtml" />
     <Content Include="Views\categorias\Edit.vbhtml" />
     <Content Include="Views\categorias\Index.vbhtml" />
-    <Content Include="Views\colores\Create.vbhtml" />
-    <Content Include="Views\colores\Delete.vbhtml" />
-    <Content Include="Views\colores\Details.vbhtml" />
-    <Content Include="Views\colores\Edit.vbhtml" />
-    <Content Include="Views\colores\Index.vbhtml" />
-    <Content Include="Views\productoes\Create.vbhtml" />
-    <Content Include="Views\productoes\Delete.vbhtml" />
-    <Content Include="Views\productoes\Details.vbhtml" />
-    <Content Include="Views\productoes\Edit.vbhtml" />
-    <Content Include="Views\productoes\Index.vbhtml" />
+    <Content Include="Views\productos\Create.vbhtml" />
+    <Content Include="Views\productos\Delete.vbhtml" />
+    <Content Include="Views\productos\Details.vbhtml" />
+    <Content Include="Views\productos\Edit.vbhtml" />
+    <Content Include="Views\productos\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

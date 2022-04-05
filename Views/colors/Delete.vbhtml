@@ -1,4 +1,4 @@
-﻿@ModelType mery_asp.colore
+﻿@ModelType mery_asp.color
 @Code
     ViewData("Title") = "Delete"
 End Code
@@ -7,15 +7,15 @@ End Code
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>colore</h4>
+    <h4>color</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(Function(model) model.color)
+            @Html.DisplayNameFor(Function(model) model.color1)
         </dt>
 
         <dd>
-            @Html.DisplayFor(Function(model) model.color)
+            @Html.DisplayFor(Function(model) model.color1)
         </dd>
 
         <dt>

@@ -9,92 +9,97 @@ Imports System.Web.Mvc
 Imports mery_asp
 
 Namespace Controllers
-    Public Class coloresController
+    Public Class productosController
         Inherits System.Web.Mvc.Controller
 
-        Private db As New productosEntities
+        Private db As New inventarioEntities
 
-        ' GET: colores
+        ' GET: productos
         Function Index() As ActionResult
-            Return View(db.colores.ToList())
+            Dim productoes = db.productoes.Include(Function(p) p.categoria)
+            Return View(productoes.ToList())
         End Function
 
-        ' GET: colores/Details/5
+        ' GET: productos/Details/5
         Function Details(ByVal id As Integer?) As ActionResult
             If IsNothing(id) Then
                 Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
             End If
-            Dim colore As colore = db.colores.Find(id)
-            If IsNothing(colore) Then
+            Dim producto As producto = db.productoes.Find(id)
+            If IsNothing(producto) Then
                 Return HttpNotFound()
             End If
-            Return View(colore)
+            Return View(producto)
         End Function
 
-        ' GET: colores/Create
+        ' GET: productos/Create
         Function Create() As ActionResult
+            ViewBag.id_categoria = New SelectList(db.categorias, "id_categoria", "categoria1")
             Return View()
         End Function
 
-        ' POST: colores/Create
+        ' POST: productos/Create
         'Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         'más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Create(<Bind(Include:="colores,color,estado")> ByVal colore As colore) As ActionResult
+        Function Create(<Bind(Include:="id_producto,id_categoria,precio,estado,producto1")> ByVal producto As producto) As ActionResult
             If ModelState.IsValid Then
-                db.colores.Add(colore)
+                db.productoes.Add(producto)
                 db.SaveChanges()
                 Return RedirectToAction("Index")
             End If
-            Return View(colore)
+            ViewBag.id_categoria = New SelectList(db.categorias, "id_categoria", "categoria1", producto.id_categoria)
+            Return View(producto)
         End Function
 
-        ' GET: colores/Edit/5
+        ' GET: productos/Edit/5
         Function Edit(ByVal id As Integer?) As ActionResult
             If IsNothing(id) Then
                 Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
             End If
-            Dim colore As colore = db.colores.Find(id)
-            If IsNothing(colore) Then
+            Dim producto As producto = db.productoes.Find(id)
+            If IsNothing(producto) Then
                 Return HttpNotFound()
             End If
-            Return View(colore)
+            ViewBag.id_categoria = New SelectList(db.categorias, "id_categoria", "categoria1", producto.id_categoria)
+            Return View(producto)
         End Function
 
-        ' POST: colores/Edit/5
+        ' POST: productos/Edit/5
         'Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         'más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Edit(<Bind(Include:="colores,color,estado")> ByVal colore As colore) As ActionResult
+        Function Edit(<Bind(Include:="id_producto,id_categoria,precio,estado,producto1")> ByVal producto As producto) As ActionResult
             If ModelState.IsValid Then
-                db.Entry(colore).State = EntityState.Modified
+                db.Entry(producto).State = EntityState.Modified
                 db.SaveChanges()
                 Return RedirectToAction("Index")
             End If
-            Return View(colore)
+            ViewBag.id_categoria = New SelectList(db.categorias, "id_categoria", "categoria1", producto.id_categoria)
+            Return View(producto)
         End Function
 
-        ' GET: colores/Delete/5
+        ' GET: productos/Delete/5
         Function Delete(ByVal id As Integer?) As ActionResult
             If IsNothing(id) Then
                 Return New HttpStatusCodeResult(HttpStatusCode.BadRequest)
             End If
-            Dim colore As colore = db.colores.Find(id)
-            If IsNothing(colore) Then
+            Dim producto As producto = db.productoes.Find(id)
+            If IsNothing(producto) Then
                 Return HttpNotFound()
             End If
-            Return View(colore)
+            Return View(producto)
         End Function
 
-        ' POST: colores/Delete/5
+        ' POST: productos/Delete/5
         <HttpPost()>
         <ActionName("Delete")>
         <ValidateAntiForgeryToken()>
         Function DeleteConfirmed(ByVal id As Integer) As ActionResult
-            Dim colore As colore = db.colores.Find(id)
-            db.colores.Remove(colore)
+            Dim producto As producto = db.productoes.Find(id)
+            db.productoes.Remove(producto)
             db.SaveChanges()
             Return RedirectToAction("Index")
         End Function

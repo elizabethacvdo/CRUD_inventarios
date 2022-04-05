@@ -1,4 +1,4 @@
-﻿@ModelType mery_asp.colore
+﻿@ModelType mery_asp.color
 @Code
     ViewData("Title") = "Details"
 End Code
@@ -6,15 +6,15 @@ End Code
 <h2>Details</h2>
 
 <div>
-    <h4>colore</h4>
+    <h4>color</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(Function(model) model.color)
+            @Html.DisplayNameFor(Function(model) model.color1)
         </dt>
 
         <dd>
-            @Html.DisplayFor(Function(model) model.color)
+            @Html.DisplayFor(Function(model) model.color1)
         </dd>
 
         <dt>
@@ -28,6 +28,6 @@ End Code
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", New With { .id = Model.colores }) |
+    @Html.ActionLink("Edit", "Edit", New With { .id = Model.id_color }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

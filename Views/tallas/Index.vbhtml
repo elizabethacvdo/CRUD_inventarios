@@ -28,9 +28,9 @@ End Code
             @Html.DisplayFor(Function(modelItem) item.estado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", New With {.id = item.id }) |
-            @Html.ActionLink("Details", "Details", New With {.id = item.id }) |
-            @Html.ActionLink("Delete", "Delete", New With {.id = item.id })
+            @Html.ActionLink("Edit", "Edit", New With {.id = item.id_talla }) |
+            @Html.ActionLink("Details", "Details", New With {.id = item.id_talla }) |
+            @Html.ActionLink("Delete", "Delete", New With {.id = item.id_talla })
         </td>
     </tr>
 Next

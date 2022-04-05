@@ -1,4 +1,4 @@
-﻿@ModelType IEnumerable(Of mery_asp.colore)
+﻿@ModelType IEnumerable(Of mery_asp.color)
 @Code
 ViewData("Title") = "Index"
 End Code
@@ -11,7 +11,7 @@ End Code
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(Function(model) model.color)
+            @Html.DisplayNameFor(Function(model) model.color1)
         </th>
         <th>
             @Html.DisplayNameFor(Function(model) model.estado)
@@ -22,15 +22,15 @@ End Code
 @For Each item In Model
     @<tr>
         <td>
-            @Html.DisplayFor(Function(modelItem) item.color)
+            @Html.DisplayFor(Function(modelItem) item.color1)
         </td>
         <td>
             @Html.DisplayFor(Function(modelItem) item.estado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", New With {.id = item.colores }) |
-            @Html.ActionLink("Details", "Details", New With {.id = item.colores }) |
-            @Html.ActionLink("Delete", "Delete", New With {.id = item.colores })
+            @Html.ActionLink("Edit", "Edit", New With {.id = item.id_color }) |
+            @Html.ActionLink("Details", "Details", New With {.id = item.id_color }) |
+            @Html.ActionLink("Delete", "Delete", New With {.id = item.id_color })
         </td>
     </tr>
 Next

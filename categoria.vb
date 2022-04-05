@@ -11,8 +11,10 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class categoria
-    Public Property id As Integer
+    Public Property id_categoria As Integer
     Public Property categoria1 As String
     Public Property estado As String
+
+    Public Overridable Property productoes As ICollection(Of producto) = New HashSet(Of producto)
 
 End Class

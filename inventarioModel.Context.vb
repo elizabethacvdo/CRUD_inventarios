@@ -11,11 +11,11 @@ Imports System
 Imports System.Data.Entity
 Imports System.Data.Entity.Infrastructure
 
-Partial Public Class productosEntities
+Partial Public Class inventarioEntities
     Inherits DbContext
 
     Public Sub New()
-        MyBase.New("name=productosEntities")
+        MyBase.New("name=inventarioEntities")
     End Sub
 
     Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
@@ -23,7 +23,7 @@ Partial Public Class productosEntities
     End Sub
 
     Public Overridable Property categorias() As DbSet(Of categoria)
-    Public Overridable Property colores() As DbSet(Of colore)
+    Public Overridable Property colors() As DbSet(Of color)
     Public Overridable Property productoes() As DbSet(Of producto)
     Public Overridable Property tallas() As DbSet(Of talla)
 

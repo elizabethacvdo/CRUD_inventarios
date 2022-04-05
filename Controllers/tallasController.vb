@@ -12,7 +12,7 @@ Namespace Controllers
     Public Class tallasController
         Inherits System.Web.Mvc.Controller
 
-        Private db As New productosEntities
+        Private db As New inventarioEntities
 
         ' GET: tallas
         Function Index() As ActionResult
@@ -41,7 +41,7 @@ Namespace Controllers
         'más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Create(<Bind(Include:="id,talla1,estado")> ByVal talla As talla) As ActionResult
+        Function Create(<Bind(Include:="id_talla,talla1,estado")> ByVal talla As talla) As ActionResult
             If ModelState.IsValid Then
                 db.tallas.Add(talla)
                 db.SaveChanges()
@@ -67,7 +67,7 @@ Namespace Controllers
         'más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Edit(<Bind(Include:="id,talla1,estado")> ByVal talla As talla) As ActionResult
+        Function Edit(<Bind(Include:="id_talla,talla1,estado")> ByVal talla As talla) As ActionResult
             If ModelState.IsValid Then
                 db.Entry(talla).State = EntityState.Modified
                 db.SaveChanges()

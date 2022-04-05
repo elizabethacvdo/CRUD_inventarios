@@ -12,7 +12,7 @@ Namespace Controllers
     Public Class categoriasController
         Inherits System.Web.Mvc.Controller
 
-        Private db As New productosEntities
+        Private db As New inventarioEntities
 
         ' GET: categorias
         Function Index() As ActionResult
@@ -41,7 +41,7 @@ Namespace Controllers
         'más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Create(<Bind(Include:="id,categoria1,estado")> ByVal categoria As categoria) As ActionResult
+        Function Create(<Bind(Include:="id_categoria,categoria1,estado")> ByVal categoria As categoria) As ActionResult
             If ModelState.IsValid Then
                 db.categorias.Add(categoria)
                 db.SaveChanges()
@@ -67,7 +67,7 @@ Namespace Controllers
         'más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         <HttpPost()>
         <ValidateAntiForgeryToken()>
-        Function Edit(<Bind(Include:="id,categoria1,estado")> ByVal categoria As categoria) As ActionResult
+        Function Edit(<Bind(Include:="id_categoria,categoria1,estado")> ByVal categoria As categoria) As ActionResult
             If ModelState.IsValid Then
                 db.Entry(categoria).State = EntityState.Modified
                 db.SaveChanges()
